@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# bin/compile <build-dir> <cache-dir>
+
+set -e
+
+MIDGARD2_TARBALL=https://s3-eu-west-1.amazonaws.com/midgard-heroku/midgard2.tar.gz
+
+echo "-----> Installing midgard2-core"
+curl --silent --max-time 60 --location "$MIDGARD2_TARBALL" | tar xz
+
